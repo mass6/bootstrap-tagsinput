@@ -224,6 +224,9 @@
         self.itemsArray.pop();
 
       self.pushVal(self.options.triggerChange);
+
+      var afterRemoveAllEvent = $.Event('afterRemoveAll', {});
+      self.$element.trigger(afterRemoveAllEvent);
     },
 
     /**
